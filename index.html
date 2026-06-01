@@ -478,7 +478,7 @@
          PRESUPUESTO — Formulario
     ══════════════════════════════════════════ -->
     <section class="section" id="presupuesto">
-      <div class="container container--narrow">
+      <div class="container">
 
         <div class="section-header section-header--center" data-aos>
           <span class="eyebrow">Consulta sin compromiso</span>
@@ -490,40 +490,36 @@
         <div class="form-wrap" data-aos>
           <form id="presupuesto-form" novalidate>
 
+            <div class="form-columns">
+
             <!-- Datos de contacto -->
-            <div style="margin-bottom:2.5rem">
+            <div class="form-col">
               <span class="eyebrow">Datos de contacto</span>
-              <div class="form-grid">
+              <div class="form-grid form-grid--stack">
 
                 <div class="form-group">
-                  <label for="nombre">Nombre *</label>
-                  <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required autocomplete="given-name">
+                  <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Nombre *" required autocomplete="given-name">
                 </div>
 
                 <div class="form-group">
-                  <label for="apellido">Apellido *</label>
-                  <input type="text" id="apellido" name="apellido" class="form-input" placeholder="Tu apellido" required autocomplete="family-name">
+                  <input type="text" id="apellido" name="apellido" class="form-input" placeholder="Apellido *" required autocomplete="family-name">
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="correo@ejemplo.com" required autocomplete="email">
+                  <input type="email" id="email" name="email" class="form-input" placeholder="Email *" required autocomplete="email">
                 </div>
 
                 <div class="form-group">
-                  <label for="movil">Móvil *</label>
-                  <input type="tel" id="movil" name="movil" class="form-input" placeholder="+54 9 11 0000-0000" required autocomplete="tel">
+                  <input type="tel" id="movil" name="movil" class="form-input" placeholder="Móvil *" required autocomplete="tel">
                 </div>
 
                 <div class="form-group">
-                  <label for="empresa">Empresa / Organización</label>
-                  <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Nombre de tu empresa (opcional)" autocomplete="organization">
+                  <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Empresa / Organización" autocomplete="organization">
                 </div>
 
                 <div class="form-group">
-                  <label for="como-nos-conociste">¿Cómo nos conociste?</label>
-                  <select id="como-nos-conociste" name="como_nos_conociste" class="form-select">
-                    <option value="" disabled selected>Seleccioná una opción</option>
+                  <select id="como-nos-conociste" name="como_nos_conociste" class="form-select" aria-label="¿Cómo nos conociste?">
+                    <option value="" disabled selected>¿Cómo nos conociste?</option>
                     <option value="google">Google</option>
                     <option value="locales">Nuestros locales</option>
                     <option value="evento">En un evento</option>
@@ -537,7 +533,7 @@
             </div>
 
             <!-- Detalles del evento -->
-            <div style="margin-bottom:2.5rem;padding-top:2rem;border-top:1px solid var(--border)">
+            <div class="form-col">
               <span class="eyebrow">Detalles del evento</span>
               <div class="form-grid">
 
@@ -612,6 +608,8 @@
 
               </div>
             </div>
+
+            </div><!-- /.form-columns -->
 
             <!-- Verificación captcha -->
             <div style="margin-bottom:2rem;padding-top:2rem;border-top:1px solid var(--border)">
