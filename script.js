@@ -118,17 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ─── HERO VIDEO — TOGGLE VOLUMEN ───
-  const heroVideo  = document.getElementById('hero-video');
-  const heroVolBtn = document.getElementById('hero-vol-btn');
+  const heroVideo    = document.getElementById('hero-video');
+  const heroVolBtn   = document.getElementById('hero-vol-btn');
+  const heroVideoWrap = heroVideo ? heroVideo.closest('.hero__video-wrap') : null;
   if (heroVideo && heroVolBtn) {
     function toggleVolumen() {
       heroVideo.muted = !heroVideo.muted;
       heroVolBtn.classList.toggle('is-on', !heroVideo.muted);
       heroVolBtn.setAttribute('aria-label', heroVideo.muted ? 'Activar sonido' : 'Silenciar');
     }
-    heroVolBtn.addEventListener('click', toggleVolumen);
-    // Click directo sobre el video también activa/silencia (solo desktop)
-    heroVideo.addEventListener('click', toggleVolumen);
+    heroVolBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleVolumen(); });
+    if (heroVideoWrap) heroVideoWrap.addEventListener('click', toggleVolumen);
   }
 
   // ─── LIGHTBOX ───
