@@ -131,10 +131,10 @@ p{font-size:.9375rem;color:var(--gris);line-height:1.8}
 .gallery-block__title{font-size:clamp(1.25rem,2vw,1.75rem);font-weight:300;margin-top:.25rem}
 .gallery-carousel-wrap{position:relative;left:50%;width:100vw;margin-left:-50vw;overflow-x:auto;cursor:grab;margin-bottom:.75rem;scrollbar-width:none}
 .gallery-carousel-outer{position:relative}
-.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.88);border:1px solid rgba(68,68,68,.15);color:var(--negro);font-size:2.2rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,opacity .2s,box-shadow .2s;user-select:none;-webkit-user-select:none;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.88);border:1px solid rgba(68,68,68,.15);color:var(--negro);font-size:1.8rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,opacity .2s,box-shadow .2s;user-select:none;-webkit-user-select:none;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 .gallery-arrow:hover{background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.gallery-arrow--prev{left:calc((100% - 100vw) / 2 + 0.8rem)}
-.gallery-arrow--next{right:calc((100% - 100vw) / 2 + 0.8rem)}
+.gallery-arrow--prev{left:calc((100% - 100vw) / 2 + 1rem)}
+.gallery-arrow--next{right:calc((100% - 100vw) / 2 + 1rem)}
 .gallery-progress{width:80%;height:2px;background:var(--border);border-radius:2px;margin-bottom:2.5rem;overflow:hidden}
 .gallery-progress__fill{height:100%;width:0%;background:var(--negro);border-radius:2px;transition:width .1s linear;will-change:width}
 .gallery-carousel-wrap::-webkit-scrollbar{display:none}
@@ -445,4 +445,6 @@ label{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:upperc
   .gallery-card{width:300px;height:250px}
   .gallery-card--video{width:calc(300px * 9 / 16)}
   .gallery-track{padding:.5rem 1rem 1.5rem 0}
+  .gallery-arrow--prev{left:calc((100% - 100vw) / 2 + 0.2rem)}
+.gallery-arrow--next{right:calc((100% - 100vw) / 2 + 0.2rem)}
 }
