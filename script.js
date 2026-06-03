@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── NAV SCROLL ───
   const nav = document.getElementById('nav');
-  if (nav && !nav.classList.contains('scrolled')) {
+  if (nav) {
     const onScroll = () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
+      const hero = document.getElementById('hero');
+      const threshold = hero ? hero.offsetHeight - nav.offsetHeight : window.innerHeight * 0.8;
+      nav.classList.toggle('logo-visible', window.scrollY > threshold);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -167,50 +170,117 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lbClose)    lbClose.addEventListener('click', closeLightbox);
   if (lbBackdrop) lbBackdrop.addEventListener('click', closeLightbox);
 
-  // ─── GALERÍA — DRAG CAROUSEL ───
-  const galleryWrap = document.getElementById('gallery-wrap');
-  if (galleryWrap) {
+  // ─── GALERÍA — DRAG CAROUSEL (todos los carruseles) ───
+  function initDragCarousel(wrap) {
     let isDown      = false;
     let startX      = 0;
     let scrollStart = 0;
     let moved       = false;
 
-    galleryWrap.addEventListener('pointerdown', (e) => {
+    // Barra de progreso asociada
+    const outer = wrap.closest('.gallery-carousel-outer');
+    const fill  = outer ? outer.nextElementSibling?.querySelector('.gallery-progress__fill') : null;
+
+    const updateProgress = () => {
+      if (!fill) return;
+      const max = wrap.scrollWidth - wrap.clientWidth;
+      fill.style.width = max > 0 ? (wrap.scrollLeft / max * 100) + '%' : '0%';
+    };
+    wrap.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    wrap.addEventListener('pointerdown', (e) => {
       isDown      = true;
       moved       = false;
       startX      = e.clientX;
-      scrollStart = galleryWrap.scrollLeft;
-      galleryWrap.setPointerCapture(e.pointerId);
-      galleryWrap.classList.add('is-dragging');
+      scrollStart = wrap.scrollLeft;
+      wrap.setPointerCapture(e.pointerId);
+      wrap.classList.add('is-dragging');
     });
 
-    galleryWrap.addEventListener('pointermove', (e) => {
+    wrap.addEventListener('dragstart', (e) => e.preventDefault());
+
+    wrap.addEventListener('pointermove', (e) => {
       if (!isDown) return;
       const dx = e.clientX - startX;
       if (Math.abs(dx) > 4) moved = true;
-      galleryWrap.scrollLeft = scrollStart - dx;
+      wrap.scrollLeft = scrollStart - dx;
     });
 
-    galleryWrap.addEventListener('pointerup', (e) => {
+    wrap.addEventListener('pointerup', (e) => {
       const wasMoved = moved;
       isDown = false;
-      galleryWrap.classList.remove('is-dragging');
+      wrap.classList.remove('is-dragging');
       if (!wasMoved) {
         const card = e.target.closest('.gallery-card');
         if (card) openLightbox(card);
       }
     });
 
-    galleryWrap.addEventListener('pointercancel', () => {
+    wrap.addEventListener('pointercancel', () => {
       isDown = false;
-      galleryWrap.classList.remove('is-dragging');
+      wrap.classList.remove('is-dragging');
+    });
+
+    // ── Flechas hold-to-scroll ──
+    const prevBtn = outer ? outer.querySelector('.gallery-arrow--prev') : null;
+    const nextBtn = outer ? outer.querySelector('.gallery-arrow--next') : null;
+    let scrollRaf = null;
+    const SCROLL_SPEED = 12;
+
+    function startScroll(dir) {
+      if (scrollRaf) return;
+      (function step() {
+        wrap.scrollLeft += dir * SCROLL_SPEED;
+        scrollRaf = requestAnimationFrame(step);
+      })();
+    }
+    function stopScroll() {
+      if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
+    }
+
+    [prevBtn, nextBtn].forEach((btn, i) => {
+      if (!btn) return;
+      const dir = i === 0 ? -1 : 1;
+      btn.addEventListener('mousedown',  (e) => { e.preventDefault(); startScroll(dir); });
+      btn.addEventListener('touchstart', (e) => { e.preventDefault(); startScroll(dir); }, { passive: false });
+      btn.addEventListener('mouseup',    stopScroll);
+      btn.addEventListener('mouseleave', stopScroll);
+      btn.addEventListener('touchend',   stopScroll);
+      btn.addEventListener('touchcancel',stopScroll);
     });
   }
+
+  document.querySelectorAll('.gallery-carousel-wrap').forEach(initDragCarousel);
 
   // Escape key cierra lightbox
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
   });
+
+  // ─── CARRUSEL NOSOTROS ───
+  const nosotrosSlider = document.querySelector('.nosotros-slider');
+  if (nosotrosSlider) {
+    const slides = nosotrosSlider.querySelectorAll('.nosotros-slide');
+    let current = 0;
+    let timer;
+
+    const goTo = (idx) => {
+      slides[current].classList.remove('active');
+      current = (idx + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    };
+
+    const resetTimer = () => {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 4000);
+    };
+
+    resetTimer();
+
+    nosotrosSlider.querySelector('.nosotros-arrow--prev')?.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
+    nosotrosSlider.querySelector('.nosotros-arrow--next')?.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
+  }
 
   // ─── CAPTCHA DINÁMICO (presupuesto.html) ───
   const captchaQ = document.getElementById('captcha-question');
