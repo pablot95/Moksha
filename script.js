@@ -134,6 +134,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroVideoWrap) heroVideoWrap.addEventListener('click', toggleVolumen);
   }
 
+  // ─── VIDEOS GOURMET/CATERING — TOGGLE VOLUMEN AL HACER CLICK ───
+  document.querySelectorAll('.vid-vol-btn').forEach((btn) => {
+    const wrap = btn.closest('.nosotros-img, .card__img');
+    const video = wrap ? wrap.querySelector('video') : null;
+    if (!video) return;
+    function toggleVolumen() {
+      video.muted = !video.muted;
+      btn.classList.toggle('is-on', !video.muted);
+      btn.setAttribute('aria-label', video.muted ? 'Activar sonido' : 'Silenciar');
+    }
+    btn.addEventListener('click', (e) => { e.stopPropagation(); toggleVolumen(); });
+    wrap.addEventListener('click', toggleVolumen);
+  });
+
   // ─── LIGHTBOX ───
   const lightbox   = document.getElementById('gallery-lightbox');
   const lbMedia    = document.getElementById('lightbox-media');

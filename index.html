@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Moksha – Cocina Gourmet. Catering artesanal para eventos corporativos y sociales. Buenos Aires.">
+  <meta name="keywords" content="Moksha, Cocina Gourmet, Catering, Eventos, Buenos Aires">
+  <meta name="author" content="Moksha">
+  <meta name="robots" content="index, follow"> 
   <title>Moksha – Cocina Gourmet</title>
+  <link rel="icon" type="image/png" href="images/logocuadradoblanco.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -19,8 +23,8 @@
 
       <nav class="nav__links nav__links--left" aria-label="Izquierda">
         <a href="#presupuesto" class="nav__link">Pedí tu presupuesto</a>
-        <a href="#catering"    class="nav__link">Catering Integral</a>
-        <a href="#locales"     class="nav__link">Locales</a>
+        <a href="#catering"    class="nav__link">Nuestro Catering</a>
+        <a href="#nosotros"    class="nav__link">Quiénes somos</a>
       </nav>
 
       <a href="#hero" class="nav__logo" aria-label="Moksha inicio">
@@ -29,8 +33,8 @@
       </a>
 
       <nav class="nav__links nav__links--right" aria-label="Derecha">
+        <a href="#locales"     class="nav__link">Locales</a>
         <a href="#vende"       class="nav__link">Vendé Moksha</a>
-        <a href="#nosotros"    class="nav__link">Quiénes somos</a>
         <a href="#franquicias" class="nav__link">Franquicias</a>
       </nav>
 
@@ -44,10 +48,10 @@
   <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
     <span class="nav__mobile-logo"><img src="images/logohorizontalblanco.png" alt="Moksha"></span>
     <a href="#presupuesto" class="nav__link">Pedí tu presupuesto</a>
-    <a href="#catering"    class="nav__link">Catering Integral</a>
+    <a href="#catering"    class="nav__link">Nuestro Catering</a>
+    <a href="#nosotros"    class="nav__link">Quiénes somos</a>
     <a href="#locales"     class="nav__link">Locales</a>
     <a href="#vende"       class="nav__link">Vendé Moksha</a>
-    <a href="#nosotros"    class="nav__link">Quiénes somos</a>
     <a href="#franquicias" class="nav__link">Franquicias</a>
   </div>
 
@@ -89,10 +93,10 @@
             <img src="images/logohorizontalblanco.png" alt="Moksha" class="hero__brand-img">
             <span class="hero__slogan">Cocina Gourmet</span>
           </div>
-          <p class="hero__tagline">Cada evento tiene su sabor.<br>El tuyo, lo hacemos único.</p>
+          <p class="hero__tagline">Transformamos cada momento, en una experiencia gastronómica memorable</p>
           <div class="hero__actions">
             <a href="#presupuesto" class="btn btn--light">Pedí tu presupuesto</a>
-            <a href="#catering"    class="btn btn--outline-light">Conocé el catering</a>
+            <a href="#nosotros"    class="btn btn--outline-light">Conocenos!</a>
           </div>
         </div>
 
@@ -259,13 +263,32 @@
         </div><!-- /gallery-carousel-outer -->
         <div class="gallery-progress"><div class="gallery-progress__fill"></div></div>
 
-        <div class="gallery-text" data-aos>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         GOURMET CON PROPÓSITO — texto + video
+    ══════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container section-two-col">
+
+        <div data-aos>
           <span class="eyebrow">Gourmet con propósito</span>
-          <h2>Cocina que transforma<br><em>cada momento</em></h2>
-          <span class="divider"></span>
-          <p>En Moksha creemos que la gastronomía es el lenguaje más honesto de la hospitalidad. Cada bocado, cada presentación, cada servicio es diseñado para que tus invitados vivan una experiencia que no olvidarán.</p>
-          <a href="#presupuesto" class="btn btn--dark" style="margin-top:2rem">Consultá sin compromiso</a>
+          <h2 style="text-transform:uppercase">Cocina que transforma<br><em>cada momento</em></h2>
+          <span class="divider divider--left"></span>
+          <p style="margin-bottom:1.25rem">Moksha proviene del Hindú, y tiene una fuerte conexión con la transformación. Nosotros creemos que la gastronomía artesanal es el camino indicado para transformar momentos, en hechos memorables.</p>
+          <p style="margin-bottom:2rem">Cada bocado, cada presentación, cada servicio es diseñado para que tus invitados vivan una experiencia que no olvidarán.</p>
+          <a href="https://wa.me/5491100000000?text=Hola%20Moksha%2C%20quiero%20más%20información" target="_blank" rel="noopener" class="btn btn--dark">Charlemos!</a>
         </div>
+
+        <div class="nosotros-img nosotros-img--vert" data-aos data-delay="1">
+          <video src="images/avion.mp4" autoplay muted loop playsinline></video>
+          <button class="vid-vol-btn" aria-label="Activar sonido">
+            <svg class="vol-icon vol-icon--muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="vol-icon vol-icon--sound" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -275,18 +298,21 @@
     <section class="section section--bg-arena" id="catering">
       <div class="container">
         <div class="section-header section-header--center" data-aos>
-          <span class="eyebrow">Catering Integral</span>
-          <h2>Un servicio para<br><em>cada ocasión</em></h2>
+          <span class="eyebrow">Nuestro Catering</span>
+          <h2 style="text-transform:uppercase">Un servicio excepcional<br><em>desde la primer reunión</em></h2>
           <span class="divider"></span>
-          <p>Desde un íntimo desayuno corporativo hasta un evento masivo de 500 personas. Cada servicio lleva la misma dedicación artesanal y la misma exigencia en la presentación.</p>
+          <p>Desde un íntimo desayuno corporativo hasta un evento masivo, cada servicio lleva la misma dedicación personal, cocina artesanal y la misma exigencia en la presentación y experiencia de los invitados. Para nosotros CADA evento es super masivo e importante, porque tu éxito, es el nuestro!</p>
         </div>
 
-        <div class="cards-grid">
+        <div class="cards-grid cards-grid--catering">
 
           <div class="card" data-aos>
-            <div class="card__img">
-              <!-- <img src="images/card-corporativo.jpg" alt="Corporativo"> -->
-              <div class="card__img-placeholder" style="background:#DCEEF2;width:100%;height:100%">Corporativo</div>
+            <div class="card__img card__img--vert">
+              <video src="images/colon.mov" autoplay muted loop playsinline></video>
+              <button class="vid-vol-btn" aria-label="Activar sonido">
+                <svg class="vol-icon vol-icon--muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                <svg class="vol-icon vol-icon--sound" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+              </button>
             </div>
             <div class="card__body">
               <h3>Corporativo</h3>
@@ -296,9 +322,8 @@
           </div>
 
           <div class="card" data-aos data-delay="1">
-            <div class="card__img">
-              <!-- <img src="images/card-social.jpg" alt="Eventos sociales"> -->
-              <div class="card__img-placeholder" style="background:#E9E1D8;width:100%;height:100%">Social</div>
+            <div class="card__img card__img--vert">
+              <img src="images/persona.jpg" alt="Eventos sociales Moksha">
             </div>
             <div class="card__body">
               <h3>Social</h3>
@@ -308,255 +333,17 @@
           </div>
 
           <div class="card" data-aos data-delay="2">
-            <div class="card__img">
-              <!-- <img src="images/card-masivo.jpg" alt="Eventos masivos"> -->
-              <div class="card__img-placeholder" style="background:#d8e8dc;width:100%;height:100%">Masivos</div>
+            <div class="card__img card__img--vert">
+              <video src="images/masivos.mp4" autoplay muted loop playsinline></video>
+              <button class="vid-vol-btn" aria-label="Activar sonido">
+                <svg class="vol-icon vol-icon--muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                <svg class="vol-icon vol-icon--sound" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+              </button>
             </div>
             <div class="card__body">
-              <h3>Masivos +100 invitados</h3>
-              <p>Congresos, convenciones y eventos de gran escala. Logística impecable, calidad de boutique en cada plato.</p>
+              <h3>Masivos</h3>
+              <p>Congresos, convenciones y eventos de gran escala. Realizamos el evento de forma integral: vajilla, mantelería, personal, logística, lineup, ambientación, catering 360, técnica y más. La calidad y la excelencia en cada centímetro de tu evento.</p>
               <a href="#presupuesto" class="btn btn--outline" style="font-size:.72rem;padding:.625rem 1.5rem;margin-top:.5rem">Consultá</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         LOCALES
-    ══════════════════════════════════════════ -->
-    <section class="section" id="locales">
-      <div class="container">
-        <div class="section-header section-header--center" data-aos>
-          <span class="eyebrow">Encontranos</span>
-          <h2>Nuestros locales</h2>
-          <span class="divider"></span>
-          <p>Cada espacio fue diseñado para que el tiempo se detenga. Café de especialidad, pastelería artesanal y el ambiente que nos define.</p>
-        </div>
-
-        <div class="cards-grid cards-grid--duo">
-
-          <div class="card card--map" data-aos onclick="abrirMapa(1)">
-            <div class="card__img">
-              <img src="images/local1.jpeg" alt="Moksha Cafe Studio" style="width:100%;height:100%;object-fit:cover">
-            </div>
-            <div class="card__body">
-              <span class="eyebrow">Palermo</span>
-              <h3>Moksha Cafe Studio</h3>
-              <p>Fitz Roy 1962, C1414<br>Ciudad Autónoma de Buenos Aires</p>
-              <button class="btn btn--outline" style="font-size:.72rem;padding:.625rem 1.5rem;margin-top:1.25rem" onclick="event.stopPropagation();abrirMapa(1)">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Ver en mapa
-              </button>
-            </div>
-          </div>
-
-          <div class="card card--map" data-aos data-delay="1" onclick="abrirMapa(2)">
-            <div class="card__img">
-              <img src="images/localvillacrespo/IMG_8651.jpg" alt="Moksha Café & Vermú" style="width:100%;height:100%;object-fit:cover">
-            </div>
-            <div class="card__body">
-              <span class="eyebrow">Villa Crespo</span>
-              <h3>Moksha Café &amp; Vermú</h3>
-              <p>Av. Leopoldo Marechal 1305, C1416<br>Ciudad Autónoma de Buenos Aires</p>
-              <button class="btn btn--outline" style="font-size:.72rem;padding:.625rem 1.5rem;margin-top:1.25rem" onclick="event.stopPropagation();abrirMapa(2)">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Ver en mapa
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Cards de menú -->
-        <div style="margin-top:4rem;padding-top:3.5rem;border-top:1px solid var(--border)">
-          <div class="section-header section-header--center" data-aos style="margin-bottom:2rem">
-            <span class="eyebrow">Descargá o consultá</span>
-            <h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.5rem,2.5vw,2.25rem)">Nuestros menús</h3>
-          </div>
-
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:640px;margin-inline:auto">
-
-            <!-- Menú Español -->
-            <button class="menu-card" data-aos onclick="abrirMenu('images/menuespaniol.pdf','Menú en Español')" aria-label="Ver menú en español">
-              <div class="menu-card__icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <div class="menu-card__body">
-                <span class="eyebrow" style="margin-bottom:.25rem">Español</span>
-                <strong>Menú completo</strong>
-                <p>Ver carta en español</p>
-              </div>
-              <div class="menu-card__arrow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
-            </button>
-
-            <!-- Menú Inglés -->
-            <button class="menu-card" data-aos data-delay="1" onclick="abrirMenu('images/menuingles.pdf','Menu in English')" aria-label="View menu in English">
-              <div class="menu-card__icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <div class="menu-card__body">
-                <span class="eyebrow" style="margin-bottom:.25rem">English</span>
-                <strong>Full menu</strong>
-                <p>View menu in English</p>
-              </div>
-              <div class="menu-card__arrow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
-            </button>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Modal PDF -->
-    <div class="pdf-modal" id="pdf-modal" aria-modal="true" role="dialog" aria-label="Menú" hidden>
-      <div class="pdf-modal__backdrop" id="pdf-backdrop"></div>
-      <div class="pdf-modal__panel">
-        <div class="pdf-modal__header">
-          <span class="pdf-modal__title" id="pdf-modal-title"></span>
-          <button class="pdf-modal__close" id="pdf-close" aria-label="Cerrar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
-        </div>
-        <iframe class="pdf-modal__iframe" id="pdf-iframe" title="Menú PDF" src=""></iframe>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════════
-         QUIÉNES SOMOS
-    ══════════════════════════════════════════ -->
-    <section class="section section--bg-celeste" id="nosotros">
-      <div class="container section-two-col">
-
-        <div data-aos>
-          <span class="eyebrow">Nuestra filosofía</span>
-          <h2>Artesanía,<br><em>precisión y sabor</em></h2>
-          <span class="divider divider--left"></span>
-          <p style="margin-bottom:1.25rem">Moksha nació de la convicción de que la gastronomía es mucho más que alimentar: es crear momentos, construir memorias y transformar lo cotidiano en extraordinario.</p>
-          <p style="margin-bottom:2rem">Cada preparación lleva el mismo nivel de dedicación, sin importar si servimos a 10 o a 500 personas. Esa es nuestra promesa y nuestra identidad.</p>
-
-          <div class="feat-grid">
-            <div>
-              <span style="font-size:1.75rem;display:block;margin-bottom:.5rem">🌿</span>
-              <h4 style="font-size:1rem;margin-bottom:.35rem">Artesanía</h4>
-              <p style="font-size:.8125rem">Todo se elabora a mano con ingredientes seleccionados.</p>
-            </div>
-            <div>
-              <span style="font-size:1.75rem;display:block;margin-bottom:.5rem">✦</span>
-              <h4 style="font-size:1rem;margin-bottom:.35rem">Excelencia</h4>
-              <p style="font-size:.8125rem">Cada detalle importa, desde la presentación al último bocado.</p>
-            </div>
-            <div>
-              <span style="font-size:1.75rem;display:block;margin-bottom:.5rem">🤲</span>
-              <h4 style="font-size:1rem;margin-bottom:.35rem">Calidez</h4>
-              <p style="font-size:.8125rem">Tratamos a cada cliente como un invitado especial.</p>
-            </div>
-            <div>
-              <span style="font-size:1.75rem;display:block;margin-bottom:.5rem">🎯</span>
-              <h4 style="font-size:1rem;margin-bottom:.35rem">Precisión</h4>
-              <p style="font-size:.8125rem">Puntualidad, organización y ejecución sin margen de error.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="nosotros-img nosotros-slider" data-aos data-delay="1">
-          <div class="nosotros-slide active"><img src="images/momentosygente/_DSC2876.jpg" alt="Moksha momentos"></div>
-          <div class="nosotros-slide"><img src="images/momentosygente/_DSC3020.jpg" alt="Moksha momentos"></div>
-          <div class="nosotros-slide"><img src="images/momentosygente/_DSC7178.jpg" alt="Moksha momentos"></div>
-          <div class="nosotros-slide"><img src="images/momentosygente/_DSC7255.jpg" alt="Moksha momentos"></div>
-          <div class="nosotros-slide"><img src="images/momentosygente/_DSC7345.jpg" alt="Moksha momentos"></div>
-          <button class="nosotros-arrow nosotros-arrow--prev" aria-label="Anterior">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          </button>
-          <button class="nosotros-arrow nosotros-arrow--next" aria-label="Siguiente">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         VENDÉ MOKSHA
-    ══════════════════════════════════════════ -->
-    <section class="section" id="vende">
-      <div class="container">
-        <div class="section-two-col section-two-col--start">
-
-          <div data-aos>
-            <span class="eyebrow">Oportunidad de negocio</span>
-            <h2>Vendé<br><em>Moksha</em></h2>
-            <span class="divider divider--left"></span>
-            <p style="margin-bottom:1.25rem">¿Tenés una cafetería, un espacio gastronómico o un emprendimiento de alimentos? Distribuí los productos Moksha y accedé a una línea gourmet con identidad propia, packaging premium y respaldo de marca.</p>
-            <p style="margin-bottom:2rem">Trabajamos con distribuidores seleccionados que comparten nuestra filosofía: calidad, presentación y experiencia al cliente.</p>
-            <a href="https://wa.me/5491100000000?text=Hola%20Moksha%2C%20quiero%20información%20para%20vender%20sus%20productos" target="_blank" rel="noopener" class="btn btn--dark">Consultá por WhatsApp</a>
-          </div>
-
-          <div class="feat-grid" data-aos data-delay="1">
-            <div style="padding:1.75rem;background:var(--celeste);border-radius:2px">
-              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">☕</span>
-              <h4 style="margin-bottom:.5rem;font-size:1rem">Productos de calidad</h4>
-              <p style="font-size:.8125rem">Línea artesanal gourmet con identidad de marca consolidada.</p>
-            </div>
-            <div style="padding:1.75rem;background:var(--arena);border-radius:2px">
-              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">📦</span>
-              <h4 style="margin-bottom:.5rem;font-size:1rem">Packaging premium</h4>
-              <p style="font-size:.8125rem">Presentación que atrae y comunica el valor del producto.</p>
-            </div>
-            <div style="padding:1.75rem;background:var(--arena);border-radius:2px">
-              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">🤝</span>
-              <h4 style="margin-bottom:.5rem;font-size:1rem">Soporte continuo</h4>
-              <p style="font-size:.8125rem">Acompañamiento, capacitación y materiales de comunicación.</p>
-            </div>
-            <div style="padding:1.75rem;background:var(--celeste);border-radius:2px">
-              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">📈</span>
-              <h4 style="margin-bottom:.5rem;font-size:1rem">Marca en crecimiento</h4>
-              <p style="font-size:.8125rem">Apalancate en una marca que crece y genera demanda propia.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         FRANQUICIAS
-    ══════════════════════════════════════════ -->
-    <section class="section section--bg-negro" id="franquicias">
-      <div class="container">
-        <div class="section-two-col">
-
-          <div data-aos>
-            <span class="eyebrow" style="color:rgba(255,255,255,.4)">Modelo de negocio</span>
-            <h2 style="color:#F8F6F2">Tu propio local<br><em>Moksha</em></h2>
-            <span class="divider divider--left" style="background:rgba(255,255,255,.2)"></span>
-            <p style="color:rgba(255,255,255,.55);margin-bottom:1.25rem">Ofrecemos un sistema de franquicia diseñado para emprendedores que valoran la gastronomía de calidad y quieren llevar la experiencia Moksha a su ciudad.</p>
-            <p style="color:rgba(255,255,255,.55);margin-bottom:2.5rem">Desde el diseño del local hasta la capacitación del equipo, te acompañamos en cada paso con un modelo llave en mano.</p>
-            <a href="https://wa.me/5491100000000?text=Hola%20Moksha%2C%20quiero%20información%20sobre%20franquicias" target="_blank" rel="noopener" class="btn btn--light">Pedí el kit de información</a>
-          </div>
-
-          <div style="display:flex;flex-direction:column;gap:1px" data-aos data-delay="1">
-            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
-              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Llave en mano</h4>
-              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Diseño, manual de identidad, capacitación y soporte desde el día uno.</p>
-            </div>
-            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
-              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Marca consolidada</h4>
-              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Apalancate en la reputación e identidad de Moksha desde el primer día.</p>
-            </div>
-            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
-              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Recetas exclusivas</h4>
-              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Accedés al recetario completo y a la cadena de proveedores seleccionados.</p>
-            </div>
-            <div style="padding:1.75rem">
-              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Comunidad activa</h4>
-              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Campañas compartidas, materiales y red de franquiciados en crecimiento.</p>
             </div>
           </div>
 
@@ -571,7 +358,7 @@
       <div class="container">
 
         <div class="section-header section-header--center" data-aos>
-          <span class="eyebrow">Consulta sin compromiso</span>
+          <span class="eyebrow">¿Tenés un evento? Charlemos!</span>
           <h2>Pedí tu presupuesto</h2>
           <span class="divider"></span>
           <p style="font-size:1.05rem;line-height:1.85">En Moksha estamos convencidos de que cada evento es único. Y así también lo es su presupuesto — hecho 100% a la medida de cada uno de ustedes. Menú a medida, presupuesto adaptado, servicio cumpliendo la totalidad de las expectativas.</p>
@@ -732,6 +519,237 @@
       </div>
     </section>
 
+    <!-- ══════════════════════════════════════════
+         LOCALES
+    ══════════════════════════════════════════ -->
+    <section class="section" id="locales">
+      <div class="container">
+        <div class="section-header section-header--center" data-aos>
+          <span class="eyebrow">Encontranos</span>
+          <h2>Nuestros locales</h2>
+          <span class="divider"></span>
+          <p>Cada espacio fue pensado con mucho amor, para brindarte un momento de calidez, de paz y encuentro. Nuestra cocina propia 100% artesanal hace el resto, junto al café de especialidad de los maestros tostadores de Puerto Blest, que diseñaron un café a la altura. Música relajante, ambiente como en casa, servicio personalizado, y olorcito rico… ¡Te esperamos!</p>
+        </div>
+
+        <div class="cards-grid cards-grid--duo">
+
+          <div class="card card--map" data-aos onclick="abrirMapa(1)">
+            <div class="card__img">
+              <img src="images/local1.jpeg" alt="Moksha Cafe Studio" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div class="card__body">
+              <span class="eyebrow">Palermo</span>
+              <h3 class="local-name"><span class="local-name__brand">Moksha</span><br><em>Café Studio</em></h3>
+              <p>Fitz Roy 1962, C1414<br>Ciudad Autónoma de Buenos Aires</p>
+              <button class="btn btn--outline" style="font-size:.72rem;padding:.625rem 1.5rem;margin-top:1.25rem" onclick="event.stopPropagation();abrirMapa(1)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Ver en mapa
+              </button>
+            </div>
+          </div>
+
+          <div class="card card--map" data-aos data-delay="1" onclick="abrirMapa(2)">
+            <div class="card__img">
+              <img src="images/localvillacrespo/IMG_8651.jpg" alt="Moksha Café & Vermú" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div class="card__body">
+              <span class="eyebrow">Villa Crespo</span>
+              <h3 class="local-name"><span class="local-name__brand">Moksha</span><br><em>Café &amp; Vermú</em></h3>
+              <p>Av. Leopoldo Marechal 1305, C1416<br>Ciudad Autónoma de Buenos Aires</p>
+              <button class="btn btn--outline" style="font-size:.72rem;padding:.625rem 1.5rem;margin-top:1.25rem" onclick="event.stopPropagation();abrirMapa(2)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Ver en mapa
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cards de menú -->
+        <div style="margin-top:4rem;padding-top:3.5rem;border-top:1px solid var(--border)">
+          <div class="section-header section-header--center" data-aos style="margin-bottom:2rem">
+            <span class="eyebrow">Descargá o consultá</span>
+            <h3 style="font-family:var(--font-title);font-weight:400;font-size:clamp(1.5rem,2.5vw,2.25rem)">Nuestros menús</h3>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:640px;margin-inline:auto">
+
+            <!-- Menú Español -->
+            <button class="menu-card" data-aos onclick="abrirMenu('images/menuespaniol.pdf','Menú en Español')" aria-label="Ver menú en español">
+              <div class="menu-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="menu-card__body">
+                <span class="eyebrow" style="margin-bottom:.25rem">Español</span>
+                <strong>Menú completo</strong>
+                <p>Ver carta en español</p>
+              </div>
+              <div class="menu-card__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </button>
+
+            <!-- Menú Inglés -->
+            <button class="menu-card" data-aos data-delay="1" onclick="abrirMenu('images/menuingles.pdf','Menu in English')" aria-label="View menu in English">
+              <div class="menu-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="menu-card__body">
+                <span class="eyebrow" style="margin-bottom:.25rem">English</span>
+                <strong>Full menu</strong>
+                <p>View menu in English</p>
+              </div>
+              <div class="menu-card__arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal PDF -->
+    <div class="pdf-modal" id="pdf-modal" aria-modal="true" role="dialog" aria-label="Menú" hidden>
+      <div class="pdf-modal__backdrop" id="pdf-backdrop"></div>
+      <div class="pdf-modal__panel">
+        <div class="pdf-modal__header">
+          <span class="pdf-modal__title" id="pdf-modal-title"></span>
+          <button class="pdf-modal__close" id="pdf-close" aria-label="Cerrar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <iframe class="pdf-modal__iframe" id="pdf-iframe" title="Menú PDF" src=""></iframe>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         QUIÉNES SOMOS
+    ══════════════════════════════════════════ -->
+    <section class="section section--bg-celeste" id="nosotros">
+      <div class="container section-two-col">
+
+        <div data-aos>
+          <span class="eyebrow">¿Quiénes somos?</span>
+          <h2>Primero,<br><em>somos familia</em></h2>
+          <span class="divider divider--left"></span>
+          <p style="margin-bottom:1.25rem">Moksha fue creado en un contexto de pandemia (diciembre de 2020), luego de que la franquicia que tenía Andrés —dueño y creador de Moksha— le bajara el pulgar y pidiera la salida porque iban a cerrar la marca, después de 7 maravillosos años.</p>
+          <p style="margin-bottom:1.25rem">Luego de varios cafés, charlas, dilemas y preguntas… nació Moksha, que desde su concepto significa "transformar". Andrés creyó y cree que nada se mantiene quieto, todo se transforma… y que la vida lleva a las personas y marcas al cambio y adaptación constantes. En este contexto nace Moksha, para transformar la diaria de una ciudad golpeada por el encierro, con ganas de salir adelante y de compartir momentos nuevos. Moksha nace en Microcentro, en abril de 2020. Hoy tenemos dos locales, un centro de producción propio y muchas ganas de seguir creciendo.</p>
+          <p style="margin-bottom:2rem">Nuestro principal activo es la familia: Noelia, hermana de Andrés, cumple un rol fundamental con compras, proveedores y estrategias de marca. Es hoy la mano derecha de Andrés. Claudia, su mamá, es la encargada de alinear al equipo de los locales y bajar las normativas y procesos para que las experiencias en las boutiques sean únicas y perfectas — ¡es la mamá de todos los que hacemos Moksha! El equipo, de más de 10 personas, con calidez y armonía, busca mejorar y perfeccionar procesos a diario, siempre en busca de más.</p>
+        </div>
+
+        <div class="nosotros-img nosotros-slider" data-aos data-delay="1">
+          <div class="nosotros-slide active"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.34.52%20AM.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.38%20AM.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.38%20AM%20%281%29.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.38%20AM%20%282%29.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.38%20AM%20%283%29.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.38%20AM%20%284%29.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.39%20AM.jpeg" alt="Equipo Moksha"></div>
+          <div class="nosotros-slide"><img src="images/nosotros/WhatsApp%20Image%202026-06-11%20at%2010.36.39%20AM%20%281%29.jpeg" alt="Equipo Moksha"></div>
+          <button class="nosotros-arrow nosotros-arrow--prev" aria-label="Anterior">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="nosotros-arrow nosotros-arrow--next" aria-label="Siguiente">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CALIDAD · PRESENTACIÓN · ATENCIÓN — banner
+    ══════════════════════════════════════════ -->
+    <section class="mks-strip">
+      <div class="container">
+        <p class="mks-strip__text">Calidad <span>—</span> Presentación <span>—</span> Atención</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         VENDÉ MOKSHA
+    ══════════════════════════════════════════ -->
+    <section class="section" id="vende">
+      <div class="container">
+        <div class="section-two-col section-two-col--start">
+
+          <div data-aos>
+            <span class="eyebrow">Oportunidad de negocio</span>
+            <h2>Vendé<br><em>Moksha</em></h2>
+            <span class="divider divider--left"></span>
+            <p style="margin-bottom:1.25rem">¿Tenés una cafetería, un espacio gastronómico o un emprendimiento y querés ofrecer cosas ricas? Distribuí los productos Moksha y accedé a una línea gourmet con identidad propia, packaging premium y respaldo de marca.</p>
+            <p style="margin-bottom:2rem">Trabajamos con distribuidores seleccionados que comparten nuestra filosofía: calidad, presentación y experiencia al cliente.</p>
+            <a href="https://wa.me/5491100000000?text=Hola%20Moksha%2C%20quiero%20información%20para%20vender%20sus%20productos" target="_blank" rel="noopener" class="btn btn--dark">Consultá por WhatsApp</a>
+          </div>
+
+          <div class="feat-grid" data-aos data-delay="1">
+            <div style="padding:1.75rem;background:var(--celeste);border-radius:2px">
+              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">☕</span>
+              <h4 style="margin-bottom:.5rem;font-size:1rem">Productos de calidad</h4>
+              <p style="font-size:.8125rem">Línea artesanal gourmet con identidad de marca consolidada.</p>
+            </div>
+            <div style="padding:1.75rem;background:var(--arena);border-radius:2px">
+              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">📦</span>
+              <h4 style="margin-bottom:.5rem;font-size:1rem">Packaging premium</h4>
+              <p style="font-size:.8125rem">Presentación que atrae y comunica el valor del producto.</p>
+            </div>
+            <div style="padding:1.75rem;background:var(--arena);border-radius:2px">
+              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">🤝</span>
+              <h4 style="margin-bottom:.5rem;font-size:1rem">Soporte continuo</h4>
+              <p style="font-size:.8125rem">Acompañamiento, capacitación y materiales de comunicación.</p>
+            </div>
+            <div style="padding:1.75rem;background:var(--celeste);border-radius:2px">
+              <span style="font-size:1.75rem;display:block;margin-bottom:.75rem">📈</span>
+              <h4 style="margin-bottom:.5rem;font-size:1rem">Marca en crecimiento</h4>
+              <p style="font-size:.8125rem">Apalancate en una marca que crece y genera demanda propia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         FRANQUICIAS
+    ══════════════════════════════════════════ -->
+    <section class="section section--bg-negro" id="franquicias">
+      <div class="container">
+        <div class="section-two-col">
+
+          <div data-aos>
+            <span class="eyebrow" style="color:rgba(255,255,255,.4)">Modelo de negocio</span>
+            <h2 style="color:#F8F6F2">Tu propio local<br><em>Moksha</em></h2>
+            <span class="divider divider--left" style="background:rgba(255,255,255,.2)"></span>
+            <p style="color:rgba(255,255,255,.55);margin-bottom:1.25rem">Ofrecemos un sistema de franquicia diseñado para emprendedores que valoran la gastronomía de calidad y quieren llevar la experiencia Moksha a su ciudad.</p>
+            <p style="color:rgba(255,255,255,.55);margin-bottom:2.5rem">Desde el diseño del local hasta la capacitación del equipo, te acompañamos en cada paso con un modelo llave en mano.</p>
+            <a href="https://wa.me/5491100000000?text=Hola%20Moksha%2C%20quiero%20información%20sobre%20franquicias" target="_blank" rel="noopener" class="btn btn--light">Pedí el kit de información</a>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:1px" data-aos data-delay="1">
+            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Llave en mano</h4>
+              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Diseño, manual de identidad, capacitación y soporte desde el día uno.</p>
+            </div>
+            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Marca consolidada</h4>
+              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Apalancate en la reputación e identidad de Moksha desde el primer día.</p>
+            </div>
+            <div style="padding:1.75rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Recetas exclusivas</h4>
+              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Accedés al recetario completo y a la cadena de proveedores seleccionados.</p>
+            </div>
+            <div style="padding:1.75rem">
+              <h4 style="color:#F8F6F2;font-family:var(--font-title);font-size:1.375rem;margin-bottom:.5rem">Comunidad activa</h4>
+              <p style="color:rgba(255,255,255,.5);font-size:.875rem">Campañas compartidas, materiales y red de franquiciados en crecimiento.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ══════════════════════════════════════════
@@ -818,12 +836,12 @@
           <h5>Mapa del sitio</h5>
           <ul>
             <li><a href="#hero">Inicio</a></li>
-            <li><a href="#catering">Catering Integral</a></li>
-            <li><a href="#locales">Locales</a></li>
+            <li><a href="#presupuesto">Pedí tu presupuesto</a></li>
+            <li><a href="#catering">Nuestro Catering</a></li>
             <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#locales">Locales</a></li>
             <li><a href="#vende">Vendé Moksha</a></li>
             <li><a href="#franquicias">Franquicias</a></li>
-            <li><a href="#presupuesto">Presupuesto</a></li>
           </ul>
         </div>
 
